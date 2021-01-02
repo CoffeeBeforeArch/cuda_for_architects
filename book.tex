@@ -1,0 +1,114 @@
+\documentclass[11pt,fancy,authoryear]{elegantbook}
+
+\title{CUDA in Detail}
+\subtitle{An in-depth guide to GPGPU programming}
+
+\author{Nick Green}
+\institute{CoffeeBeforeArch}
+\date{December 31, 2020}
+\version{0.0}
+%\bioinfo{Bio}{Information}
+
+%\extrainfo{Victory won\rq t come to us unless we go to it. }
+
+%\logo{logo-blue.png}
+\cover{cover.jpg}
+
+\begin{document}
+
+\maketitle
+
+\frontmatter
+\tableofcontents
+
+\mainmatter
+
+\chapter{Introduction}
+
+\section{Why This Book on CUDA?}
+
+Out of all resources for learning GPGPU programming with CUDA, why should you pick this one? Here is a list of reasons!
+
+\begin{itemize}
+  \item \textbf{It's free:} This is book (and its source) will always be free to download
+  \item \textbf{It can be updated:} Printed books can not be updated. With a digital book, I can make modifications as new versions of CUDA are released, or correct errors in the text.
+  \item \textbf{It focuses on performance:} Performance is the primary reason you would offload computation to the GPU. As such, it will be the primary focus of each chapter.
+\end{itemize}
+
+\section{Intended Audience}
+
+This book was written as a companion piece to my YouTube series \textbf{CUDA Crash Course}. As such, the intended audience is expected to have experience in C/C++ programming, and familiarity with parallel programming concepts (atomic operations, threads, etc.). Additionally, a basic knowledge of computer organization and architecture is assumed (this is necessary for performance tuning).
+
+No backround in GPGPU (or similar accelerator) programming is required.
+
+\section{Environment}
+
+\begin{itemize}
+  \item \textbf{Operating System: } Ubuntu 20.04
+  \item \textbf{Host Compiler: } GCC 10.2
+  \item \textbf{CUDA Toolkit Version: } CUDA 11.0
+  \item \textbf{Processor: } Intel x86\-64
+  \item \textbf{GPU: } NVIDIA GeForce RTX 2060
+\end{itemize}
+
+\section{About the Author}
+
+My name is Nick, and I'm a computer systems architect working on deep learning accelerator performance in the San Francisco Bay Area.
+
+My background in GPGPUs architecture in programming came during my Ph.D. (incomplete). At that time, I worked in a research lab that focused on accelerator architectures, and developed the simulator GPGPU-Sim which modeled NVIDIA GPGPU architectures.
+
+To solidify my knowledge about GPGPU architecture and inspire new ideas for research, I began writing GPGPU applications and studying their performance. These examples layed the foundation for what would become my YouTube series \textbf{CUDA Crash Course}.
+
+Since that time, studying parallel architectures and performance has been one of my passions, and is what I do each day at work.
+
+\chapter{CUDA Basics}
+
+\chapter{Vector Addition}
+
+\section{Baseline}
+
+\chapter{Memory Copies}
+
+\section{Unified Memory}
+
+\section{Pinned Memory}
+
+\section{Zero-Copy}
+
+\section{Asynchronous Copies}
+
+\chapter{Matrix Multiplication}
+
+\section{Baseline}
+
+\section{Shared Memory}
+
+\chapter{Sum Reduction}
+
+\section{Baseline}
+
+\section{Sequential Thread Composition}
+
+\section{Sequential Addressing}
+
+\section{Work Packing}
+
+\section{Loop Unrolling}
+
+\section{Further Work Parking}
+
+\chapter{Histograms}
+
+\section{Global Atomics}
+
+\section{Shared Memory Atomics}
+
+\chapter{Convolution}
+
+\section{1-D Convolution}
+
+\section{2-D Convolution}
+
+\section{3-D Convolution}
+
+\end{document}
