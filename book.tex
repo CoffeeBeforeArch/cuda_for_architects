@@ -63,11 +63,53 @@ Since that time, studying parallel architectures and performance has been one of
 
 \chapter{CUDA Basics}
 
+In this first chapter, we will take a look at some of the core parts of CUDA programs.
+
+\begin{introduction}
+  \item Grids, Blocks, and Threads
+  \item Memory
+  \item Calling Kernels
+\end{introduction}
+
+\section{Grids, Blocks, and Threads}
+
+Unlike CPU programming which has a largely temporal programming model, the GPU programming model is inherently spatial. The first step in writing a GPU kernel is making a deciding how to spatially decompose your problem across threads.
+
+\section{Memory}
+
+One of the unique aspects of GPU programming is that we are typically working with memory that is physically separate from the CPU (with the exception of some SoCs like the Tegra).
+
+\section{Kernels}
+
+Functions that we call from the CPU and run from the GPU are typically called kernels, and are typically the highly-parallel innermost loops of an algorithm.
+
+In addition to kernels, we have device functions. Device functions are functions that are called from the GPU, and run on the GPU.
+
+\section{Calling Kernels}
+
+The final step in launching a kernel on the GPU is setting up the kernel launch. This is similar to a CPU function call with the exception of the required kernel launch parameters. These include:
+
+\begin{itemize}
+  \item The dimensions of threadblocks
+  \item The dimensions of the kernel's grid
+  \item The amount of shared memory to allocate
+  \uten The stream in which to launch the kernels
+\end{itemize}
+
 \chapter{Vector Addition}
 
-\section{Baseline}
+The classical "Hello, world!" kernel for GPUs is vector addition (often shortened as vector add). In this chapter, we'll look at how to set up both the host (CPU) and device (GPU) code for a program that caclulates the sum of the two vectors.
 
 \chapter{Memory Copies}
+
+One of the most important parts of GPU programming is data movement, and like much of programming, there are many ways to solve a problem. In this chapter, we'll be looking at some of the different ways we can orchestrate data movement between the CPU and GPU.
+
+\begin{introduction}
+  \item Unified Memory
+  \item Pinned Memory
+  \item Zero-Copy
+  \item Asynchronous Copies
+\end{introduction}
 
 \section{Unified Memory}
 
